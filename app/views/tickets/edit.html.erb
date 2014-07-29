@@ -5,4 +5,4 @@
 <% end %>
 
 <%= link_to 'Show', @ticket %> |
-<%= link_to 'Back', tickets_path %>
+<%= link_to 'Back', customer_tickets_path(@ticket.customer) %>

@@ -1,3 +1,22 @@
 // Place all the styles related to the tickets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+table.grid {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+  th {
+    border: 1px solid black;
+  }
+  td {
+    border: 1px solid black;
+  }
+}
+td.number {
+  text-align: right;
+}
+td.links {
+  width: 0;
+  text-align: right;
+}

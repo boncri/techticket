@@ -38,3 +38,15 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'better_errors'
+gem 'binding_of_caller'
+
+gem 'http_accept_language'
+
+gem 'rails-i18n', '~> 4.0.0' # For 4.0.x
+
+gem 'routing-filter', github: 'svenfuchs/routing-filter', branch: 'fix-travis'
+
+group :test do
+  gem 'shoulda'
+end

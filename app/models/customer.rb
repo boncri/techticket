@@ -4,6 +4,6 @@ class Customer < ActiveRecord::Base
 	validates :name, presence: true
 
 	def tickets_balance
-		Ticket.where(customer: self).sum(:quantity)
+		self.tickets.inject(0) { |sum, t| sum + t.balance }
 	end
 end

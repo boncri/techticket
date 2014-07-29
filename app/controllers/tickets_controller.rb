@@ -29,8 +29,8 @@ class TicketsController < ApplicationController
 
     respond_to do |format|
       if @ticket.save
-        format.html { redirect_to @ticket, notice: 'Ticket was successfully created.' }
-        format.json { render :show, status: :created, location: @ticket }
+        format.html { redirect_to customer_tickets_path(@ticket.customer), notice: 'Ticket was successfully created.' }
+        format.json { render :show, status: :created, location: customer_tickets_url(@ticket.customer) }
       else
         format.html { render :new }
         format.json { render json: @ticket.errors, status: :unprocessable_entity }
@@ -43,8 +43,8 @@ class TicketsController < ApplicationController
   def update
     respond_to do |format|
       if @ticket.update(ticket_params)
-        format.html { redirect_to @ticket, notice: 'Ticket was successfully updated.' }
-        format.json { render :show, status: :ok, location: @ticket }
+        format.html { redirect_to customer_tickets_path(@ticket.customer), notice: 'Ticket was successfully updated.' }
+        format.json { render :show, status: :ok, location: customer_tickets_url(@ticket.customer) }
       else
         format.html { render :edit }
         format.json { render json: @ticket.errors, status: :unprocessable_entity }
@@ -57,7 +57,7 @@ class TicketsController < ApplicationController
   def destroy
     @ticket.destroy
     respond_to do |format|
-      format.html { redirect_to tickets_url, notice: 'Ticket was successfully destroyed.' }
+      format.html { redirect_to customer_tickets_url(@ticket.customer), notice: 'Ticket was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -74,6 +74,6 @@ class TicketsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ticket_params
-      params.require(:ticket).permit(:description, :ticket_date, :quantity, :customer_id)
+      params.require(:ticket).permit(:description, :ticket_date, :quantity, :customer_id, :quantity_abs, :buy)
     end
 end

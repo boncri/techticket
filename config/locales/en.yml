@@ -20,4 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  destroy: 'destroy'
+  edit: 'edit'
+  back: 'back'
+  tickets:
+    index:
+      header: 'Tickets for %{customer}'
+      new: 'New Ticket'

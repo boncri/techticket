@@ -1,13 +1,12 @@
-<h1>Listing tickets</h1>
+<h1><%= t('.header', {customer:@customer.name}) %></h1>
 
-<table>
+<table class="grid">
   <thead>
     <tr>
-      <th>Description</th>
-      <th>Ticket date</th>
-      <th>Quantity</th>
-      <th>Customer</th>
-      <th colspan="3"></th>
+      <th><%= t('activerecord.attributes.ticket.description') %></th>
+      <th><%= t('activerecord.attributes.ticket.ticket_date') %></th>
+      <th><%= t('activerecord.attributes.ticket.balance') %></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -15,18 +14,18 @@
     <% @tickets.each do |ticket| %>
       <tr>
         <td><%= ticket.description %></td>
-        <td><%= ticket.ticket_date %></td>
-        <td><%= ticket.quantity %></td>
-        <td><%= ticket.customer_id %></td>
-        <td><%= link_to 'Show', ticket %></td>
-        <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
-        <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= l ticket.ticket_date %></td>
+        <td class="number"><%= ticket.balance %></td>
+        <td class="links"><%= link_to t('edit').titleize, edit_ticket_path(ticket) %>&nbsp;<%= link_to t('destroy').titleize, ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 <br>
-<b>Saldo: <%= @customer.tickets_balance %></b>
+<b><%= t('activerecord.attributes.customer.tickets_balance') %>: <%= @customer.tickets_balance %></b>
 <br>
 <br>
-<%= link_to 'New Ticket', new_customer_ticket_path(@customer) %>
+<%= link_to t('.new').titleize, new_customer_ticket_path(@customer) %>
+<br>
+<br>
+<%= link_to t('back').titleize, customers_path %>

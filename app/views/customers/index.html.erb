@@ -1,9 +1,9 @@
-<h1>Listing customers</h1>
+<h1><%= tt('.title') %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th><%= tt('activerecord.attributes.customer.name') %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,9 +12,9 @@
     <% @customers.each do |customer| %>
       <tr>
         <td><%= customer.name %></td>
-        <td><%= link_to 'Show', customer %></td>
-        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to tt('activerecord.attributes.customer.tickets'), customer_tickets_path(customer) %></td>
+        <td><%= link_to tt('edit'), edit_customer_path(customer) %></td>
+        <td><%= link_to tt('destroy'), customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New Customer', new_customer_path %>
+<%= link_to tt('.new'), new_customer_path %>

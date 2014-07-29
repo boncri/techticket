@@ -1,0 +1,28 @@
+it:
+  back: 'indietro'
+  edit: 'modifica'
+  destroy: 'elimina'
+  customers:
+    index:
+      title: 'elenco clienti'
+      new: 'Nuovo cliente'
+  tickets:
+    index:
+      header: 'Tickets per %{customer}'
+      new: 'Nuovo Ticket'
+  activerecord:
+    models:
+      customer: 'Cliente'
+    attributes:
+      ticket:
+        description: 'Descrizione'
+        ticket_date: 'Data'
+        quantity: 'Quantità'
+        customer: 'Cliente'
+        balance: 'Quantità'
+        buy: 'Acquisto'
+      customer:
+        name: 'Nome'
+        tickets: 'Tickets'
+        tickets_balance: 'Saldo'
+
