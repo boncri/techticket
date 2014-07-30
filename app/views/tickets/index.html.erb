@@ -1,4 +1,4 @@
-<h1><%= t('.header', {customer:@customer.name}) %></h1>
+<h1><%= t('.title', {customer:@customer.name}) %></h1>
 
 <table class="grid">
   <thead>
@@ -6,7 +6,7 @@
       <th><%= t('activerecord.attributes.ticket.description') %></th>
       <th><%= t('activerecord.attributes.ticket.ticket_date') %></th>
       <th><%= t('activerecord.attributes.ticket.balance') %></th>
-      <th></th>
+      <th class="not-print"></th>
     </tr>
   </thead>
 
@@ -14,7 +14,7 @@
     <% @tickets.each do |ticket| %>
       <tr>
         <td><%= ticket.description %></td>
-        <td><%= l ticket.ticket_date %></td>
+        <td class="date"><%= l ticket.ticket_date %></td>
         <td class="number"><%= ticket.balance %></td>
         <td class="links"><%= link_to t('edit').titleize, edit_ticket_path(ticket) %>&nbsp;<%= link_to t('destroy').titleize, ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -25,7 +25,9 @@
 <b><%= t('activerecord.attributes.customer.tickets_balance') %>: <%= @customer.tickets_balance %></b>
 <br>
 <br>
-<%= link_to t('.new').titleize, new_customer_ticket_path(@customer) %>
-<br>
-<br>
-<%= link_to t('back').titleize, customers_path %>
+<div class="not-print">
+    <%= link_to tt('.new'), new_customer_ticket_path(@customer), class: 'btn' %>
+    <br>
+    <br>
+    <%= link_to tt('back'), customers_path %>
+</div>

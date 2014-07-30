@@ -4,10 +4,5 @@ one:
   description: MyString
   ticket_date: 2014-07-28
   quantity: 1
-  customer_id: 1
+  customer: one
 
-two:
-  description: MyString
-  ticket_date: 2014-07-28
-  quantity: 1
-  customer_id: 1

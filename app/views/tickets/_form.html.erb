@@ -26,10 +26,6 @@
     <%= f.label :buy %><br>
     <%= f.check_box :buy %>
   </div>
-  <div class="field">
-    <%= f.label :customer %><br>
-    <%= f.select :customer_id, Customer.all.map { |c| [c.name, c.id] } %>
-  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

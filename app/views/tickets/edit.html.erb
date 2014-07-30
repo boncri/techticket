@@ -1,8 +1,7 @@
-<h1>Editing ticket</h1>
+<h1><%= t('.title', customer: @ticket.customer.name) %></h1>
 
 <%= form_for(@ticket) do |f| %>
 	<%= render 'form', f: f, customer: @ticket.customer %>
 <% end %>
 
-<%= link_to 'Show', @ticket %> |
-<%= link_to 'Back', customer_tickets_path(@ticket.customer) %>
+<%= link_to t('back'), customer_tickets_path(@ticket.customer) %>

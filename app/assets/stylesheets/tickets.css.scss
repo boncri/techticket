@@ -1,6 +1,16 @@
 // Place all the styles related to the tickets controller here.
-// They will automatically be included in application.css.
+// They will automatically be included in application.css.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.not-print {
+  @media print {
+    display: none;
+  }
+}
+
+.tickets.index h1 {
+  text-align: center;
+}
 
 table.grid {
   border: 1px solid black;
@@ -13,10 +23,14 @@ table.grid {
     border: 1px solid black;
   }
 }
+td.date {
+  text-align: right;
+}
 td.number {
   text-align: right;
 }
 td.links {
+  @extend .not-print;
   width: 0;
   text-align: right;
 }

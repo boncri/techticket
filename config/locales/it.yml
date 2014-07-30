@@ -8,8 +8,12 @@ it:
       new: 'Nuovo cliente'
   tickets:
     index:
-      header: 'Tickets per %{customer}'
+      title: 'Tickets - %{customer}'
       new: 'Nuovo Ticket'
+    edit:
+      title: 'Modifica ticket per %{customer}'
+    new:
+      title: 'Nuovo ticket per %{customer}'
   activerecord:
     models:
       customer: 'Cliente'

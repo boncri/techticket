@@ -25,5 +25,5 @@ en:
   back: 'back'
   tickets:
     index:
-      header: 'Tickets for %{customer}'
+      title: 'Tickets for %{customer}'
       new: 'New Ticket'
