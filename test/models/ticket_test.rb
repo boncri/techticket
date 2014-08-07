@@ -3,6 +3,7 @@ require 'test_helper'
 class TicketTest < ActiveSupport::TestCase
   should validate_presence_of :description
 
+  should validate_presence_of(:quantity)
   should validate_numericality_of(:quantity).is_greater_than(0)
 
   should belong_to :customer

@@ -5,5 +5,7 @@ class Customer < ActiveRecord::Base
 
 	def tickets_balance
 		self.tickets.inject(0) { |sum, t| sum + t.balance }
-	end
+  end
+
+  accepts_nested_attributes_for :tickets, allow_destroy: true
 end

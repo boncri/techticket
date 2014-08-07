@@ -1,0 +1,13 @@
+<%= f.inline_div do %>
+    <%= f.inline_row_data(class: 'my-row-data') do %>
+        <%= f.inline_input :description, as: :string, input_html: {class: 'styled'}, wrapper_html: {class: 'col-xs-7'} %>
+        <%= f.inline_input :ticket_date, as: :date_time_picker, input_html: {class: 'styled'}, wrapper_html: {class: 'col-xs-2'} %>
+        <%= f.inline_input :quantity, input_html: {style: 'width:60px'}, wrapper_html: {class: 'col-xs-1'} %>
+        <%= f.inline_input :buy, input_html: {class: 'styled'}, wrapper_html: {class: 'col-xs-1'}, collection: {'Uso'=>false, 'Acquisto'=>true} %>
+
+        <%= f.inline_row_actions do %>
+            <%= f.inline_button_remove 'Remove' %>
+            <%= f.inline_button_edit 'Edit' %>
+        <% end %>
+    <% end %>
+<% end %>

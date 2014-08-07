@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   filter :locale
 
+  inline_route_for :tickets
+
   resources :customers do
     resources :tickets, shallow: true
   end

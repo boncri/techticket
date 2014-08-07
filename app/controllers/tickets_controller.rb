@@ -1,11 +1,15 @@
 class TicketsController < ApplicationController
+  include Inliner
+
   before_action :set_customer, only: [:index, :new, :create]
   before_action :set_ticket, only: [:show, :edit, :update, :destroy]
+
+  inline_object :ticket, :customer
 
   # GET /tickets
   # GET /tickets.json
   def index
-    @tickets = Ticket.where(customer: @customer)
+    @tickets = @customer ? @customer.tickets : Ticket.all
   end
 
   # GET /tickets/1
@@ -15,7 +19,7 @@ class TicketsController < ApplicationController
 
   # GET /tickets/new
   def new
-    @ticket = Ticket.new(customer: @customer)
+    @ticket = @customer ? @customer.tickets.build : Ticket.new
   end
 
   # GET /tickets/1/edit
@@ -25,12 +29,12 @@ class TicketsController < ApplicationController
   # POST /tickets
   # POST /tickets.json
   def create
-    @ticket = Ticket.new(ticket_params)
+    @ticket = @customer.tickets.create(ticket_params)
 
     respond_to do |format|
       if @ticket.save
-        format.html { redirect_to customer_tickets_path(@ticket.customer), notice: 'Ticket was successfully created.' }
-        format.json { render :show, status: :created, location: customer_tickets_url(@ticket.customer) }
+        format.html { redirect_to edit_customer_path(@customer), notice: 'Ticket was successfully created.' }
+        format.json { render :show, status: :created, location: @ticket }
       else
         format.html { render :new }
         format.json { render json: @ticket.errors, status: :unprocessable_entity }
@@ -43,8 +47,8 @@ class TicketsController < ApplicationController
   def update
     respond_to do |format|
       if @ticket.update(ticket_params)
-        format.html { redirect_to customer_tickets_path(@ticket.customer), notice: 'Ticket was successfully updated.' }
-        format.json { render :show, status: :ok, location: customer_tickets_url(@ticket.customer) }
+        format.html { redirect_to @ticket, notice: 'Ticket was successfully updated.' }
+        format.json { head :no_content }
       else
         format.html { render :edit }
         format.json { render json: @ticket.errors, status: :unprocessable_entity }
@@ -69,7 +73,7 @@ class TicketsController < ApplicationController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_ticket
-      @ticket = Ticket.find(params[:id])
+      @ticket = Ticket.find(params[:id]) if params[:id]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

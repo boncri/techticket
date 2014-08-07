@@ -1,3 +1,39 @@
 // Place all the styles related to the customers controller here.
 // They will automatically be included in application.css.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@mixin transition($property, $time, $mode) {
+  transition: $property $time $mode;
+  -moz-transition: $property $time $mode;
+  -webkit-transition: $property $time $mode;
+}
+
+input.styled {
+  background: none !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  margin: 0 !important;
+  width: 100% !important;
+  @include transition(all, 0.2s, ease-in-out)
+}
+
+input.styled:hover, input.styled:focus {
+    background: white !important;
+    border: 1px solid gray !important;
+    @include transition(all, 0.5s, ease-in-out)
+}
+
+div.row-header {
+  border-bottom: 1px #f0f0f0 solid;
+  margin-bottom: 4px;
+  > div {
+    font-weight: bold;
+  }
+}
+
+.destroyed{
+  .my-row-data * {
+    text-decoration: line-through;
+    opacity: 0.75;
+  }
+}
