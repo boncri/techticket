@@ -1,17 +1,18 @@
 GIT
+  remote: git://github.com/boncri/inline_fields.git
+  revision: 91648e94b38f5d7a20166849d9c810f1a7fb3c83
+  specs:
+    inline_fields (0.0.1)
+      rails (~> 4)
+      simple_form
+
+GIT
   remote: git://github.com/svenfuchs/routing-filter.git
   revision: 82411940595abb6375fd07c81840c4ac351650c3
   branch: fix-travis
   specs:
     routing-filter (0.3.1)
       actionpack
-
-PATH
-  remote: /Users/boncri/Progetti/Rails/inline_fields
-  specs:
-    inline_fields (0.0.1)
-      rails (~> 4)
-      simple_form
 
 GEM
   remote: https://rubygems.org/
