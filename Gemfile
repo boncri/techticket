@@ -51,8 +51,8 @@ group :test do
   gem 'shoulda'
 end
 
-gem 'inline_fields', github: 'boncri/inline_fields'
-#gem 'inline_fields', path: '/Users/boncri/Progetti/Rails/inline_fields'
+#gem 'inline_fields', github: 'boncri/inline_fields'
+gem 'inline_fields', path: '/Users/boncri/Progetti/Rails/inline_fields'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
