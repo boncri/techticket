@@ -17,7 +17,8 @@
 
     <p><b>Saldo tickets: <%= @customer.tickets_balance %></b></p>
 
-      <%= f.inline_fields_for(:tickets, headers: {description: 'col-xs-7', ticket_date: 'col-xs-2', quantity: 'col-xs-1', operation: 'col-xs-1', _actions: 'col-xs-1'}, add_link_name:'+ Ticket') %>
+          <%= f.inline_fields_for(:tickets, headers: {description: 'col-xs-7', ticket_date: 'col-xs-2', quantity: 'col-xs-1', operation: 'col-xs-1', _actions: 'col-xs-1'}, add_link_name:'+ Ticket') %>
+
       <p></p>
     <%= f.submit %>
 <% end %>

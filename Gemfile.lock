@@ -63,6 +63,8 @@ GEM
       execjs
     coffee-script-source (1.7.1)
     debug_inspector (0.0.2)
+    enumerize (0.8.0)
+      activesupport (>= 3.2)
     erubis (2.7.0)
     execjs (2.2.1)
     hike (1.2.3)
@@ -160,6 +162,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass (~> 3.2.0)
   coffee-rails (~> 4.0.0)
+  enumerize
   http_accept_language
   inline_fields!
   jbuilder (~> 2.0)

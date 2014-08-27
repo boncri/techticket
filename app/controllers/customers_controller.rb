@@ -4,7 +4,13 @@ class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.all
+    unless params[:q].blank?
+      @q = params[:q]
+      @customers = Customer.where("LOWER(name) like LOWER(?)", @q)
+      session[:q] = request.original_fullpath
+    else
+      @customers = Customer.all
+    end
   end
 
   # GET /customers/1
@@ -69,6 +75,6 @@ class CustomersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_params
-      params.require(:customer).permit(:name, tickets_attributes: [:description, :ticket_date, :quantity, :buy, :id, :_destroy])
+      params.require(:customer).permit(:name, tickets_attributes: [:description, :ticket_date, :quantity, :op_type, :id, :_destroy])
     end
 end

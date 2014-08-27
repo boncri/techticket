@@ -1,5 +1,9 @@
 <h1><%= tt('.title') %></h1>
 
+<%= form_tag(customers_path, method: :get) do %>
+    <%= search_field_tag :q, @q %>
+<% end %>
+
 <table>
   <thead>
     <tr>

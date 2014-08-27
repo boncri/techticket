@@ -36,7 +36,7 @@ class CustomersControllerTest < ActionController::TestCase
 
   test "should update customer" do
     patch :update, id: @customer, customer: { name: @customer.name }
-    assert_redirected_to customer_path(assigns(:customer))
+    assert_redirected_to edit_customer_path(assigns(:customer))
   end
 
   test "should destroy customer" do

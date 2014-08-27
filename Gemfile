@@ -58,3 +58,5 @@ gem 'autoprefixer-rails'
 
 gem 'simple_form'
 gem 'jquery-ui-rails'
+
+gem 'enumerize'

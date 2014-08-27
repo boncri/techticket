@@ -1,0 +1,6 @@
+it:
+  enumerize:
+    ticket:
+      op_type:
+        buy: 'Acquisto'
+        use: 'Uso'

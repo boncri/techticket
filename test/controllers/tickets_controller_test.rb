@@ -25,7 +25,7 @@ class TicketsControllerTest < ActionController::TestCase
     end
     
     assert_not_nil assigns(:ticket)
-    assert_redirected_to customer_tickets_path(assigns(:customer))
+    assert_redirected_to edit_customer_path(assigns(:customer))
   end
 
   test "should show ticket" do
@@ -42,7 +42,7 @@ class TicketsControllerTest < ActionController::TestCase
 
   test "should update ticket" do
     patch :update, id: @ticket, ticket: { customer_id:@ticket.customer.id, description: @ticket.description, quantity: @ticket.quantity, ticket_date: @ticket.ticket_date }
-    assert_redirected_to customer_tickets_path(assigns(:ticket).customer)
+    assert_redirected_to ticket_path(assigns(:ticket))
   end
 
   test "should destroy ticket" do

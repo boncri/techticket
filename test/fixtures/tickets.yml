@@ -5,4 +5,5 @@ one:
   ticket_date: 2014-07-28
   quantity: 1
   customer: one
+  op_type: 1
 
