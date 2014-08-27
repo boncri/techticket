@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93ea6482-baa4-4cbb-a1cf-8891eab18337" name="Default" comment="Fixes">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20140827210104_add_op_type_to_tickets.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/locales/enumerize.it.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/customers/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/customers/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tickets/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/tickets/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tickets/_ticket_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/tickets/_ticket_fields.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tickets/_ticket_inline_fields.html.erb" afterPath="$PROJECT_DIR$/app/views/tickets/_ticket_inline_fields.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/customer_test.rb" afterPath="$PROJECT_DIR$/test/models/customer_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/customers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/customers_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/customers_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/customers_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/customers/index.html.erb" afterPath="$PROJECT_DIR$/app/views/customers/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/customers/show.html.erb" afterPath="$PROJECT_DIR$/app/views/customers/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/techticket.iml" afterPath="$PROJECT_DIR$/.idea/techticket.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ticket.rb" afterPath="$PROJECT_DIR$/app/models/ticket.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/ticket_test.rb" afterPath="$PROJECT_DIR$/test/models/ticket_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/tickets.yml" afterPath="$PROJECT_DIR$/test/fixtures/tickets.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tickets_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tickets_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/tickets_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/tickets_controller_test.rb" />
+    <list default="true" id="93ea6482-baa4-4cbb-a1cf-8891eab18337" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="techticket.iws" />
@@ -944,7 +921,11 @@
       <created>1409180127318</created>
       <updated>1409180127318</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixes">
+      <created>1409180142149</created>
+      <updated>1409180142149</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -988,9 +969,9 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Add some stuff..." />
-    <MESSAGE value="Fixes" />
     <MESSAGE value="Use enumeration op_type instead of boolean buy." />
-    <option name="LAST_COMMIT_MESSAGE" value="Use enumeration op_type instead of boolean buy." />
+    <MESSAGE value="Fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
