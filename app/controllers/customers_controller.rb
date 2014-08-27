@@ -6,7 +6,7 @@ class CustomersController < ApplicationController
   def index
     unless params[:q].blank?
       @q = params[:q]
-      @customers = Customer.where("LOWER(name) like LOWER(?)", @q)
+      @customers = Customer.where("LOWER(name) like LOWER('%#{@q}%')")
       session[:q] = request.original_fullpath
     else
       @customers = Customer.all
